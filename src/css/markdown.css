@@ -1,0 +1,183 @@
+/* NotionThemeBoldFont.css */
+
+/*
+   Google Fonts 임포트: Noto Sans KR (한글), Inter (영문)
+   이 부분을 CSS 파일 상단이나 React 프로젝트의 전역 CSS 파일에 추가해야 합니다.
+   혹은 index.html의 <head> 태그 안에 <link> 태그로 추가할 수도 있습니다.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+
+
+/* 기본 폰트 및 라인 높이 설정 */
+.notion-style-markdown-bold-font {
+  font-family: 'Inter', 'Noto Sans KR', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  line-height: 1.6;
+  color: #37352f; /* 노션 기본 텍스트 색상 */
+  max-width: 700px; /* 콘텐츠 너비 제한 (노션과 유사하게) */
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 20px; /* 내부 여백 */
+}
+
+/* 헤딩 (h1-h6) - 폰트 굵기를 더욱 강조 */
+.notion-style-markdown-bold-font h1,
+.notion-style-markdown-bold-font h2,
+.notion-style-markdown-bold-font h3,
+.notion-style-markdown-bold-font h4,
+.notion-style-markdown-bold-font h5,
+.notion-style-markdown-bold-font h6 {
+  font-weight: 700; /* 기존 600에서 700으로 더 볼드하게 */
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+  color: #37352f;
+}
+
+.notion-style-markdown-bold-font h1 {
+  font-size: 2.5em;
+  font-weight: 800; /* h1은 더 강조 */
+}
+
+.notion-style-markdown-bold-font h2 {
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.notion-style-markdown-bold-font h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.notion-style-markdown-bold-font h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.notion-style-markdown-bold-font h5 {
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.notion-style-markdown-bold-font h6 {
+  font-size: 1em;
+  color: #6a6a6a;
+  font-weight: 500;
+}
+
+/* 문단 (p) - 일반 텍스트 폰트 굵기 조절 (선택 사항: 500으로 하면 더 볼드해 보임) */
+.notion-style-markdown-bold-font p {
+  margin-bottom: 1em;
+  font-weight: 400; /* 기본 폰트 굵기. 500으로 변경하여 살짝 더 볼드하게 할 수도 있습니다. */
+}
+
+/* 링크 (a) */
+.notion-style-markdown-bold-font a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.notion-style-markdown-bold-font a:hover {
+  text-decoration: underline;
+}
+
+/* 리스트 (ul, ol) */
+.notion-style-markdown-bold-font ul,
+.notion-style-markdown-bold-font ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.notion-style-markdown-bold-font ul li,
+.notion-style-markdown-bold-font ol li {
+  margin-bottom: 0.5em;
+}
+
+/* 코드 (인라인 코드) */
+.notion-style-markdown-bold-font code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: rgba(135, 131, 120, 0.15);
+  color: #eb5757;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.85em;
+}
+
+/* 코드 블록 (pre) */
+.notion-style-markdown-bold-font pre {
+  background-color: #f6f6f6;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+  margin-bottom: 1em;
+}
+
+.notion-style-markdown-bold-font pre code {
+  display: block;
+  background-color: transparent;
+  color: #37352f;
+  padding: 0;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* 인용문 (blockquote) */
+.notion-style-markdown-bold-font blockquote {
+  border-left: 3px solid #e0e0e0;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  color: #6a6a6a;
+  font-style: italic;
+}
+
+/* 구분선 (hr) */
+.notion-style-markdown-bold-font hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2em 0;
+}
+
+/* 이미지 (img) */
+.notion-style-markdown-bold-font img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em 0;
+  border-radius: 4px;
+}
+
+/* 테이블 (table) */
+.notion-style-markdown-bold-font table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+.notion-style-markdown-bold-font th,
+.notion-style-markdown-bold-font td {
+  border: 1px solid #e0e0e0;
+  padding: 0.8em;
+  text-align: left;
+}
+
+.notion-style-markdown-bold-font th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
+
+/* 체크박스 (task list) */
+.notion-style-markdown-bold-font ul.contains-task-list li.task-list-item {
+  list-style-type: none;
+}
+
+.notion-style-markdown-bold-font ul.contains-task-list li.task-list-item input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+
+/* 강조 (strong, em) */
+.notion-style-markdown-bold-font strong {
+  font-weight: 700; /* 기존 700에서 더 강조된 느낌을 줄 수 있습니다. */
+}
+
+.notion-style-markdown-bold-font em {
+  font-style: italic;
+}
