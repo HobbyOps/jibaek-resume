@@ -1,183 +1,189 @@
-/* NotionThemeBoldFont.css */
+/* GitHubDocsTheme.css */
 
 /*
-   Google Fonts 임포트: Noto Sans KR (한글), Inter (영문)
-   이 부분을 CSS 파일 상단이나 React 프로젝트의 전역 CSS 파일에 추가해야 합니다.
-   혹은 index.html의 <head> 태그 안에 <link> 태그로 추가할 수도 있습니다.
+   선택 사항: Noto Sans KR 폰트를 외부에서 로드하고 싶다면 (시스템에 없는 경우 대비)
+   아래 @import 규칙을 이 CSS 파일 상단이나, React 프로젝트의 index.html <head> 태그 안에 추가하세요.
+   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
 */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
 
 
-/* 기본 폰트 및 라인 높이 설정 */
-.notion-style-markdown-bold-font {
-  font-family: 'Inter', 'Noto Sans KR', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  line-height: 1.6;
-  color: #37352f; /* 노션 기본 텍스트 색상 */
-  max-width: 700px; /* 콘텐츠 너비 제한 (노션과 유사하게) */
+/* 기본 폰트 및 스타일 설정 */
+.markdown {
+  /* GitHub Docs에서 흔히 사용하는 시스템 폰트 스택 */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Sans KR';
+  line-height: 1.65; /* 가독성을 위한 충분한 줄 간격 */
+  color: #24292e; /* GitHub 기본 텍스트 색상 */
+  background-color: #ffffff; /* 흰색 배경 */
+  max-width: 800px; /* 콘텐츠 너비 제한 */
   margin: 0 auto; /* 중앙 정렬 */
-  padding: 20px; /* 내부 여백 */
+  padding: 30px 20px; /* 충분한 내부 여백 */
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 */
 }
 
-/* 헤딩 (h1-h6) - 폰트 굵기를 더욱 강조 */
-.notion-style-markdown-bold-font h1,
-.notion-style-markdown-bold-font h2,
-.notion-style-markdown-bold-font h3,
-.notion-style-markdown-bold-font h4,
-.notion-style-markdown-bold-font h5,
-.notion-style-markdown-bold-font h6 {
-  font-weight: 700; /* 기존 600에서 700으로 더 볼드하게 */
-  margin-top: 1.5em;
+/* 헤딩 (h1-h6): 적당히 볼드하며 깔끔함 */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 600; /* 적당히 볼드한 폰트 굵기 */
+  margin-top: 1.8em; /* 위쪽 여백 증가 */
   margin-bottom: 0.8em;
-  line-height: 1.2;
-  color: #37352f;
+  line-height: 1.25;
+  color: #24292e;
 }
 
-.notion-style-markdown-bold-font h1 {
+.markdown h1 {
   font-size: 2.5em;
-  font-weight: 800; /* h1은 더 강조 */
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef; /* 가벼운 구분선 */
 }
 
-.notion-style-markdown-bold-font h2 {
+.markdown h2 {
   font-size: 2em;
-  font-weight: 700;
+  padding-bottom: 0.2em;
+  border-bottom: 1px solid #eaecef;
 }
 
-.notion-style-markdown-bold-font h3 {
+.markdown h3 {
   font-size: 1.5em;
-  font-weight: 600;
 }
 
-.notion-style-markdown-bold-font h4 {
+.markdown h4 {
   font-size: 1.2em;
-  font-weight: 600;
 }
 
-.notion-style-markdown-bold-font h5 {
-  font-size: 1.1em;
-  font-weight: 500;
-}
-
-.notion-style-markdown-bold-font h6 {
+.markdown h5 {
   font-size: 1em;
-  color: #6a6a6a;
-  font-weight: 500;
+  color: #586069; /* 약간 연한 색상 */
 }
 
-/* 문단 (p) - 일반 텍스트 폰트 굵기 조절 (선택 사항: 500으로 하면 더 볼드해 보임) */
-.notion-style-markdown-bold-font p {
-  margin-bottom: 1em;
-  font-weight: 400; /* 기본 폰트 굵기. 500으로 변경하여 살짝 더 볼드하게 할 수도 있습니다. */
+.markdown h6 {
+  font-size: 0.9em;
+  color: #6a737d; /* 더 연한 색상 */
+}
+
+/* 문단 (p) */
+.markdown p {
+  margin-bottom: 1.2em; /* 문단 간 여백 */
 }
 
 /* 링크 (a) */
-.notion-style-markdown-bold-font a {
-  color: #007bff;
-  text-decoration: none;
+.markdown a {
+  color: #0366d6; /* GitHub 링크 파란색 */
+  text-decoration: none; /* 기본적으로 밑줄 없음 */
 }
 
-.notion-style-markdown-bold-font a:hover {
-  text-decoration: underline;
+.markdown a:hover {
+  text-decoration: underline; /* 호버 시 밑줄 */
 }
 
 /* 리스트 (ul, ol) */
-.notion-style-markdown-bold-font ul,
-.notion-style-markdown-bold-font ol {
-  margin-left: 1.5em;
-  margin-bottom: 1em;
+.markdown ul,
+.markdown ol {
+  margin-left: 1.8em; /* 충분한 들여쓰기 */
+  margin-bottom: 1.2em;
+  padding: 0;
 }
 
-.notion-style-markdown-bold-font ul li,
-.notion-style-markdown-bold-font ol li {
-  margin-bottom: 0.5em;
+.markdown ul li,
+.markdown ol li {
+  margin-bottom: 0.6em;
 }
 
 /* 코드 (인라인 코드) */
-.notion-style-markdown-bold-font code {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  background-color: rgba(135, 131, 120, 0.15);
-  color: #eb5757;
+.markdown code {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  background-color: rgba(27,31,35,.05); /* GitHub 인라인 코드 배경색 */
+  color: #24292e; /* 인라인 코드 텍스트 색상 */
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 0.85em;
+  white-space: nowrap; /* 줄바꿈 방지 */
 }
 
 /* 코드 블록 (pre) */
-.notion-style-markdown-bold-font pre {
-  background-color: #f6f6f6;
+.markdown pre {
+  background-color: #f6f8fa; /* GitHub 코드 블록 배경색 */
   padding: 1em;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin-bottom: 1em;
+  border-radius: 6px; /* 모서리 둥글게 */
+  overflow-x: auto; /* 긴 코드 가로 스크롤 */
+  margin-bottom: 1.5em;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.45;
 }
 
-.notion-style-markdown-bold-font pre code {
+.markdown pre code {
   display: block;
-  background-color: transparent;
-  color: #37352f;
+  background-color: transparent; /* 코드 블록 내 코드는 배경색 없음 */
+  color: inherit; /* 부모로부터 색상 상속 */
   padding: 0;
-  font-size: 0.9em;
-  line-height: 1.4;
 }
 
 /* 인용문 (blockquote) */
-.notion-style-markdown-bold-font blockquote {
-  border-left: 3px solid #e0e0e0;
+.markdown blockquote {
+  border-left: 0.25em solid #dfe2e5; /* GitHub 인용문 좌측 라인 */
   padding-left: 1em;
   margin-left: 0;
-  margin-bottom: 1em;
-  color: #6a6a6a;
-  font-style: italic;
+  margin-bottom: 1.5em;
+  color: #586069; /* 인용문 텍스트 색상 */
 }
 
 /* 구분선 (hr) */
-.notion-style-markdown-bold-font hr {
+.markdown hr {
   border: none;
-  border-top: 1px solid #e0e0e0;
-  margin: 2em 0;
+  border-top: 1px solid #eaecef; /* GitHub 구분선 색상 */
+  margin: 3em 0; /* 충분한 여백 */
 }
 
 /* 이미지 (img) */
-.notion-style-markdown-bold-font img {
+.markdown img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1em 0;
+  margin: 1.5em 0;
   border-radius: 4px;
 }
 
 /* 테이블 (table) */
-.notion-style-markdown-bold-font table {
+.markdown table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
 }
 
-.notion-style-markdown-bold-font th,
-.notion-style-markdown-bold-font td {
-  border: 1px solid #e0e0e0;
+.markdown th,
+.markdown td {
+  border: 1px solid #dfe2e5; /* GitHub 테이블 테두리 */
   padding: 0.8em;
   text-align: left;
 }
 
-.notion-style-markdown-bold-font th {
-  background-color: #f7f7f7;
+.markdown th {
+  background-color: #f6f8fa; /* 헤더 배경색 */
   font-weight: 600;
-}
-
-/* 체크박스 (task list) */
-.notion-style-markdown-bold-font ul.contains-task-list li.task-list-item {
-  list-style-type: none;
-}
-
-.notion-style-markdown-bold-font ul.contains-task-list li.task-list-item input[type="checkbox"] {
-  margin-right: 0.5em;
+  color: #24292e;
 }
 
 /* 강조 (strong, em) */
-.notion-style-markdown-bold-font strong {
-  font-weight: 700; /* 기존 700에서 더 강조된 느낌을 줄 수 있습니다. */
+.markdown strong {
+  font-weight: 700; /* 더 강한 볼드체 */
 }
 
-.notion-style-markdown-bold-font em {
+.markdown em {
   font-style: italic;
+  color: #444d56; /* 약간 강조된 색상 */
+}
+
+/* 체크박스 (task list) */
+.markdown ul.contains-task-list li.task-list-item {
+  list-style-type: none; /* 기본 리스트 마커 제거 */
+}
+
+.markdown ul.contains-task-list li.task-list-item input[type="checkbox"] {
+  margin-right: 0.6em;
+  /* GitHub 스타일과 유사하게 보이기 위해 커스텀 체크박스 스타일을 적용할 수도 있습니다. */
 }

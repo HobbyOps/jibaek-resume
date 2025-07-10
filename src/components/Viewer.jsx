@@ -22,7 +22,7 @@ function Viewer() {
 
     return (
     <div className="viewer">
-        <div className="notion-style-markdown-bold-font">
+        <div className="markdown">
             <Markdown>{fileContent}</Markdown>
         </div>
     </div>
