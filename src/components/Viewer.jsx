@@ -41,19 +41,11 @@ function Viewer() {
   };
 
     return (
-<<<<<<< Updated upstream
-    <div className="viewer">
-        develop test
-        <div className="notion-style-markdown-bold-font">
-            <Markdown>{fileContent}</Markdown>
-        </div>
-=======
     <div className="notion-markdown-container">
       <button onClick={handleToggle} className="theme-toggle-button">
         {isDarkMode ? '☀️' : '🌙'} {/* 아이콘으로 현재 모드 표시 */}
       </button>
       <Markdown>{fileContent}</Markdown>
->>>>>>> Stashed changes
     </div>
   )
 }
