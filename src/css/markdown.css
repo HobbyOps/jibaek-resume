@@ -1,13 +1,22 @@
+<<<<<<< Updated upstream
 /* NotionThemeBoldFont.css */
 
 /*
    Google Fonts 임포트: Noto Sans KR (한글), Inter (영문)
    이 부분을 CSS 파일 상단이나 React 프로젝트의 전역 CSS 파일에 추가해야 합니다.
    혹은 index.html의 <head> 태그 안에 <link> 태그로 추가할 수도 있습니다.
+=======
+/* NotionDualTheme.css */
+
+/*
+   Google Fonts 임포트: Inter (영문), Noto Sans KR (한글)
+   이 부분을 CSS 파일 상단이나 React 프로젝트의 index.html <head> 태그 안에 추가해야 합니다.
+>>>>>>> Stashed changes
 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
 
 
+<<<<<<< Updated upstream
 /* 기본 폰트 및 라인 높이 설정 */
 .notion-style-markdown-bold-font {
   font-family: 'Inter', 'Noto Sans KR', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -43,15 +52,110 @@
 }
 
 .notion-style-markdown-bold-font h3 {
+=======
+/* CSS 변수 정의 (라이트 모드 기본값) */
+:root {
+  /* 배경 및 전반적인 요소 색상 */
+  --color-bg-primary: #ffffff; /* 문서 본문 배경 */
+  --color-bg-secondary: #f6f6f6; /* 코드 블록, 테이블 헤더 배경 등 */
+  --color-text-primary: #37352f; /* 기본 텍스트 색상 */
+  --color-text-secondary: #6a6a6a; /* 보조 텍스트 (h6, blockquote 등) */
+  --color-link: #007bff; /* 링크 색상 */
+  --color-border: #e0e0e0; /* 일반 테두리, 구분선 */
+  --color-shadow: rgba(0, 0, 0, 0.1); /* 카드 그림자 */
+
+  /* 코드 관련 색상 */
+  --color-code-inline-bg: rgba(135, 131, 120, 0.15);
+  --color-code-inline-text: #eb5757;
+  --color-code-block-bg: #f6f6f6;
+  --color-code-block-text: #37352f;
+}
+
+/* 다크 모드 변수 재정의 */
+body.dark-mode {
+  /* 배경 및 전반적인 요소 색상 */
+  --color-bg-primary: #2f3437; /* 문서 본문 배경 */
+  --color-bg-secondary: #3b4146; /* 코드 블록, 테이블 헤더 배경 등 */
+  --color-text-primary: #e3e2e0; /* 기본 텍스트 색상 */
+  --color-text-secondary: #a2a2a0; /* 보조 텍스트 */
+  --color-link: #8bc4f7; /* 링크 색상 */
+  --color-border: #5e626e; /* 일반 테두리, 구분선 */
+  --color-shadow: rgba(0, 0, 0, 0.6); /* 카드 그림자 (더 진하게) */
+
+  /* 코드 관련 색상 */
+  --color-code-inline-bg: rgba(110, 105, 96, 0.2);
+  --color-code-inline-text: #f98282;
+  --color-code-block-bg: #3b4146;
+  --color-code-block-text: #e3e2e0;
+}
+
+/* 전체 페이지 기본 설정 */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary); /* body 배경색도 테마에 따라 변경 */
+  transition: background-color 0.3s ease; /* 부드러운 전환 */
+}
+
+/* 마크다운 콘텐츠 래퍼 */
+.notion-markdown-container {
+  font-family: 'Inter', 'Noto Sans KR', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  
+  /* --- 변경된 부분 --- */
+  line-height: 1.7; /* 줄 간격을 더 넓게 */
+  font-size: 0.95em; /* 기본 폰트 크기를 약간 줄임 */
+  padding: 80px 60px; /* 내부 패딩을 더 크게 */
+  /* --- 변경된 부분 끝 --- */
+
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* box-shadow: 0 5px 20px var(--color-shadow); */
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* 헤딩 (h1-h6) - 기본 폰트 크기가 줄었으니, em 단위는 자동으로 상대적으로 줄어듭니다. */
+.notion-markdown-container h1,
+.notion-markdown-container h2,
+.notion-markdown-container h3,
+.notion-markdown-container h4,
+.notion-markdown-container h5,
+.notion-markdown-container h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
+  color: var(--color-text-primary);
+}
+
+.notion-markdown-container h1 {
+  font-size: 2.5em;
+}
+
+.notion-markdown-container h2 {
+  font-size: 2em;
+}
+
+.notion-markdown-container h3 {
+>>>>>>> Stashed changes
   font-size: 1.5em;
   font-weight: 600;
 }
 
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font h4 {
+=======
+.notion-markdown-container h4 {
+>>>>>>> Stashed changes
   font-size: 1.2em;
   font-weight: 600;
 }
 
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font h5 {
   font-size: 1.1em;
   font-weight: 500;
@@ -76,22 +180,56 @@
 }
 
 .notion-style-markdown-bold-font a:hover {
+=======
+.notion-markdown-container h5 {
+  font-size: 1.1em;
+}
+
+.notion-markdown-container h6 {
+  font-size: 1em;
+  color: var(--color-text-secondary);
+}
+
+/* 문단 (p) */
+.notion-markdown-container p {
+  margin-bottom: 1em;
+}
+
+/* 링크 (a) */
+.notion-markdown-container a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.notion-markdown-container a:hover {
+>>>>>>> Stashed changes
   text-decoration: underline;
 }
 
 /* 리스트 (ul, ol) */
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font ul,
 .notion-style-markdown-bold-font ol {
+=======
+.notion-markdown-container ul,
+.notion-markdown-container ol {
+>>>>>>> Stashed changes
   margin-left: 1.5em;
   margin-bottom: 1em;
 }
 
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font ul li,
 .notion-style-markdown-bold-font ol li {
+=======
+.notion-markdown-container ul li,
+.notion-markdown-container ol li {
+>>>>>>> Stashed changes
   margin-bottom: 0.5em;
 }
 
 /* 코드 (인라인 코드) */
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font code {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
   background-color: rgba(135, 131, 120, 0.15);
@@ -104,40 +242,82 @@
 /* 코드 블록 (pre) */
 .notion-style-markdown-bold-font pre {
   background-color: #f6f6f6;
+=======
+.notion-markdown-container code {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+  background-color: var(--color-code-inline-bg);
+  color: var(--color-code-inline-text);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.85em; /* 기본 폰트 크기가 줄었으니 이 값도 상대적으로 줄어듬 */
+}
+
+/* 코드 블록 (pre) */
+.notion-markdown-container pre {
+  background-color: var(--color-code-block-bg);
+>>>>>>> Stashed changes
   padding: 1em;
   border-radius: 5px;
   overflow-x: auto;
   margin-bottom: 1em;
 }
 
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font pre code {
   display: block;
   background-color: transparent;
   color: #37352f;
   padding: 0;
   font-size: 0.9em;
+=======
+.notion-markdown-container pre code {
+  display: block;
+  background-color: transparent;
+  color: var(--color-code-block-text);
+  padding: 0;
+  font-size: 0.9em; /* 기본 폰트 크기가 줄었으니 이 값도 상대적으로 줄어듬 */
+>>>>>>> Stashed changes
   line-height: 1.4;
 }
 
 /* 인용문 (blockquote) */
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font blockquote {
   border-left: 3px solid #e0e0e0;
   padding-left: 1em;
   margin-left: 0;
   margin-bottom: 1em;
   color: #6a6a6a;
+=======
+.notion-markdown-container blockquote {
+  border-left: 3px solid var(--color-border);
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  color: var(--color-text-secondary);
+>>>>>>> Stashed changes
   font-style: italic;
 }
 
 /* 구분선 (hr) */
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font hr {
   border: none;
   border-top: 1px solid #e0e0e0;
+=======
+.notion-markdown-container hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+>>>>>>> Stashed changes
   margin: 2em 0;
 }
 
 /* 이미지 (img) */
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font img {
+=======
+.notion-markdown-container img {
+>>>>>>> Stashed changes
   max-width: 100%;
   height: auto;
   display: block;
@@ -146,19 +326,30 @@
 }
 
 /* 테이블 (table) */
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font table {
+=======
+.notion-markdown-container table {
+>>>>>>> Stashed changes
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1em;
 }
 
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font th,
 .notion-style-markdown-bold-font td {
   border: 1px solid #e0e0e0;
+=======
+.notion-markdown-container th,
+.notion-markdown-container td {
+  border: 1px solid var(--color-border);
+>>>>>>> Stashed changes
   padding: 0.8em;
   text-align: left;
 }
 
+<<<<<<< Updated upstream
 .notion-style-markdown-bold-font th {
   background-color: #f7f7f7;
   font-weight: 600;
@@ -180,4 +371,45 @@
 
 .notion-style-markdown-bold-font em {
   font-style: italic;
+=======
+.notion-markdown-container th {
+  background-color: var(--color-bg-secondary);
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+/* 강조 (strong, em) */
+.notion-markdown-container strong {
+  font-weight: 700;
+}
+
+.notion-markdown-container em {
+  font-style: italic;
+}
+
+/* 토글 버튼 스타일 */
+.theme-toggle-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px var(--color-shadow);
+  z-index: 10; /* 다른 콘텐츠 위에 오도록 */
+}
+
+.theme-toggle-button:hover {
+  filter: brightness(0.95); /* 호버 시 약간 어둡게 */
+>>>>>>> Stashed changes
 }

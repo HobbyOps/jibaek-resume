@@ -4,7 +4,7 @@ import Viewer from './components/Viewer.jsx';
 function App() {
   return (
     <div>
-        <Viewer />
+      <Viewer />
     </div>
   );
 }
