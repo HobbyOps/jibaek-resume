@@ -43,7 +43,7 @@ function Viewer() {
     return (
     <div className="notion-markdown-container">
       <button onClick={handleToggle} className="theme-toggle-button">
-        {isDarkMode ? '☀️' : '🌙'} {/* 아이콘으로 현재 모드 표시 */}
+        {isDarkMode ? '☀️' : '🌙'} 
       </button>
       <Markdown>{fileContent}</Markdown>
     </div>
