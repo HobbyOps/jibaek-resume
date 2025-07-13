@@ -1,4 +1,6 @@
-# 백재인
+# 안녕하세요 백재인입니다.
+
+***
 
 ## **Contact**
 
@@ -8,7 +10,9 @@
 
 **Blog:** [https://velog.io/@baekjaein](https://velog.io/@baekjaein/posts)
 
-## Introduce
+***
+
+## **Introduce**
 
 안녕하세요, 저는 시스템 모니터링과 운영 자동화를 기반으로 커리어를 확장해가고 있는 6년차 엔지니어 백재인입니다.
 
@@ -17,7 +21,9 @@
 최근에는 개발과 운영의 경계를 줄이는 일에 관심을 가지고, 반복되는 작업을 자동화하고 배포 과정을 효율화하는 흐름 속에서 더 넓은 역할을 수행하고자 노력하고 있습니다.
 단순한 운영을 넘어, 더 나은 개발 환경과 지속 가능한 시스템 구조를 만들어가는 일에 보람을 느끼고 있습니다.
 
-## Skills
+***
+
+## **Skills**
 
 ### 🔧 Infrastructure
 
@@ -43,25 +49,29 @@
 ### 📝 Language
 
 - Javascript
-    - React
-    - Vue.js
+  - React
+  - Vue.js
 - Python
 - Bash Script
 - PCRE
 
-## Experience
+***
 
-**리눅스데이타시스템 / Splunk 엔지니어 / 책임 (2018.10 - 재직 중)**
+## **Experience**
 
-- Multi-Site Indexer / Search Head Cluster 아키텍처 설계 및 구축 (3TB+/day)
-- Splunk Enterprise Security 구축 및 시나리오 개발
-- FW, WAF 등 보안 장비의 로그 수집 파이프라인 운영 및 모니터링 체계 유지
-- 장애 대응을 위한 경고 시스템 구성 및 사후조치 시나리오 작성
-- 사내 개발팀을 위한 Jenkins 기반 빌드 파이프라인 구성
-- GitHub Actions를 활용한 브랜치/태그 기반 자동 빌드 파이프라인 구성
-- ArgoCD를 통한 서비스 배포 자동화 및 Helm 차트 릴리즈 관리
+- **리눅스데이타시스템 / Splunk 엔지니어 / 책임** (2018.10 - 재직 중)
 
-## Project
+    - Multi-Site Indexer / Search Head Cluster 아키텍처 설계 및 구축 (3TB+/day)
+    - Splunk Enterprise Security 구축 및 시나리오 개발
+    - FW, WAF 등 보안 장비의 로그 수집 파이프라인 운영 및 모니터링 체계 유지
+    - 장애 대응을 위한 경고 시스템 구성 및 사후조치 시나리오 작성
+    - 사내 개발팀을 위한 Jenkins 기반 빌드 파이프라인 구성
+    - GitHub Actions를 활용한 브랜치/태그 기반 자동 빌드 파이프라인 구성
+    - ArgoCD를 통한 서비스 배포 자동화 및 Helm 차트 릴리즈 관리
+
+***
+
+## **Project**
 
 - **사내 / 내부 개발자 플랫폼 구성** (2025.01 ~ )
     - 개발 생산성 향상을 위한 CI/CD 및 GitOps 플랫폼 설계 및 초기 구축 주도
@@ -107,13 +117,16 @@
     - 시스템 사용 로그 및 보안 로그 처리 시스템 구축
     - 대시보드 개발
     
+***
 
-## Education / Military service
+## **Education / Military service**
 
 - 세명컴퓨터고등학교 / 스마트보안솔루션 / 졸업 (2016.03.02 ~ 2019.01.03)
 - 산업기능요원 / 현역 / 전역 (2021.01.11 ~ 2023.11.10)
 
-## Certificate / **Awards**
+***
+
+## **Certificate / Awards**
 
 - Splunk Accredited Sales Rep I, II (2019. 01)
 - 정보기기운용기능사 (2018.06)
