@@ -8,7 +8,6 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
 
-
 /* CSS 변수 정의 (라이트 모드 기본값) */
 :root {
   /* 배경 및 전반적인 요소 색상 */
@@ -102,13 +101,12 @@ body {
 }
 
 .notion-markdown-container h3 {
+
   font-size: 1.5em;
-  font-weight: 600;
 }
 
 .notion-markdown-container h4 {
   font-size: 1.2em;
-  font-weight: 600;
 }
 
 .notion-markdown-container h5 {
@@ -161,9 +159,12 @@ body {
 .notion-markdown-container pre {
   background-color: var(--color-code-block-bg);
   padding: 1em;
-  border-radius: 5px;
-  overflow-x: auto;
-  margin-bottom: 1em;
+  border-radius: 6px; /* 모서리 둥글게 */
+  overflow-x: auto; /* 긴 코드 가로 스크롤 */
+  margin-bottom: 1.5em;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.45;
 }
 
 .notion-markdown-container pre code {
@@ -197,7 +198,7 @@ body {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 1em 0;
+  margin: 1.5em 0;
   border-radius: 4px;
 }
 
@@ -205,7 +206,8 @@ body {
 .notion-markdown-container table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  font-size: 0.95em;
 }
 
 .notion-markdown-container th,
